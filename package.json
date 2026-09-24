@@ -1,0 +1,26 @@
+{
+  "name": "2d_game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsup",
+    "dev": "npm run build && cd public && php -S 127.0.0.1:8000",
+    "dev:nolocalspecific": "npm run build && cd public && php -S 0.0.0.0:8000",
+    "dev:watch": "npx nodemon --watch src --watch backend -e ts --exec \"npm run dev\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@types/ws": "^8.18.1",
+    "fs": "^0.0.1-security",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "ws": "^8.21.3"
+  }
+}
